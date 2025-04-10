@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="primPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="primbg" stylesheets="@App.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoapp.todoapp.LoginPageController">
+   <children>
+      <AnchorPane fx:id="loginPane" prefHeight="450.0" prefWidth="600.0" styleClass="primbg" stylesheets="@App.css">
+         <children>
+            <TextField fx:id="usnmFieldL" layoutX="182.0" layoutY="179.0" prefHeight="25.0" prefWidth="317.0" promptText="Enter your username" styleClass="field" stylesheets="@App.css" />
+            <Label layoutX="102.0" layoutY="183.0" styleClass="txt" stylesheets="@App.css" text="Username :" />
+            <PasswordField fx:id="passFieldL" layoutX="182.0" layoutY="223.0" prefHeight="25.0" prefWidth="317.0" promptText="Enter your password" styleClass="field" stylesheets="@App.css" />
+            <Label layoutX="106.0" layoutY="227.0" styleClass="txt" stylesheets="@App.css" text="Password :" />
+            <Label alignment="CENTER" layoutY="71.0" prefHeight="28.0" prefWidth="600.0" styleClass="txt" stylesheets="@App.css" text="Login">
+               <font>
+                  <Font name="Roboto Slab Black" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="453.0" layoutY="275.0" mnemonicParsing="false" onAction="#Login" styleClass="btn" stylesheets="@App.css" text="Login" />
+            <Button layoutX="235.0" layoutY="354.0" mnemonicParsing="false" onAction="#GoToCreatePage" styleClass="btn" stylesheets="@App.css" text="Create a new account" />
+            <Label fx:id="errorLabelL" alignment="CENTER" layoutX="182.0" layoutY="149.0" prefHeight="17.0" prefWidth="317.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="createNewAccPane" prefHeight="450.0" prefWidth="600.0" styleClass="primbg" stylesheets="@App.css" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutY="72.0" prefHeight="28.0" prefWidth="600.0" styleClass="txt" stylesheets="@App.css" text="Create a new account">
+               <font>
+                  <Font name="Roboto Slab Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usnmFieldC" layoutX="203.0" layoutY="155.0" prefHeight="25.0" prefWidth="317.0" promptText="Enter a username" styleClass="field" stylesheets="@App.css" />
+            <Label layoutX="123.0" layoutY="159.0" styleClass="txt" stylesheets="@App.css" text="Username :" />
+            <PasswordField fx:id="passFieldC" layoutX="203.0" layoutY="201.0" prefHeight="25.0" prefWidth="317.0" promptText="Enter a password" styleClass="field" stylesheets="@App.css" />
+            <Label layoutX="127.0" layoutY="205.0" prefHeight="17.0" styleClass="txt" stylesheets="@App.css" text="Password :" />
+            <PasswordField fx:id="cfmPassFieldC" layoutX="203.0" layoutY="247.0" prefHeight="25.0" prefWidth="317.0" promptText="Confirm your password" styleClass="field" stylesheets="@App.css" />
+            <Label layoutX="81.0" layoutY="251.0" prefHeight="17.0" styleClass="txt" stylesheets="@App.css" text="Confirm Password :" />
+            <Button layoutX="469.0" layoutY="303.0" mnemonicParsing="false" onAction="#CreateAccount" styleClass="btn" stylesheets="@App.css" text="Create" />
+            <Button layoutX="225.0" layoutY="354.0" mnemonicParsing="false" onAction="#GoToLoginPage" styleClass="btn" stylesheets="@App.css" text="Already have an account?" />
+            <Label fx:id="errorLabelC" alignment="CENTER" layoutX="205.0" layoutY="130.0" prefHeight="17.0" prefWidth="317.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="navBar" prefHeight="30.0" prefWidth="600.0" styleClass="navBar" stylesheets="@App.css">
+         <children>
+            <Button layoutX="570.0" mnemonicParsing="false" onAction="#CloseWindow" prefHeight="30.0" prefWidth="30.0" styleClass="navBtn" stylesheets="@App.css" text="X" />
+            <Button layoutX="540.0" mnemonicParsing="false" onAction="#MinimizeWindow" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 0 0 0 0; -fx-border-radius: 0 0 0 0;" styleClass="navBtn" stylesheets="@App.css" text="-" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

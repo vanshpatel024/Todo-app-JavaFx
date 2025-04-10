@@ -1,0 +1,240 @@
+* {
+    -fx-bg: #0D0F14;        /* Primary Background */
+    -fx-bg2: #171A22;       /* Secondary Background */
+    -fx-ac: #7C3AED;        /* Accent Color */
+    -fx-ac-hover: #9A5FFD;  /* Hover Accent */
+    -fx-txt: #E0E0E0;       /* Primary Text */
+    -fx-txt2: #A0A0A0;      /* Secondary Text */
+    -fx-bd: #282C35;        /* Border Color */
+    -fx-btn: #222631;       /* Button Background */
+    -fx-btn-hover: #383D4A; /* Button Hover */
+    -fx-done: #3A3F52;      /* Completed Task */
+    -fx-warn: #D72638;      /* Warning/Delete */
+    -fx-ok: #2ECC71;        /* Success */
+}
+
+.root {
+    -fx-background-color: transparent;
+}
+
+.primbg {
+    -fx-background-color: -fx-bg;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.txt {
+    -fx-text-fill: -fx-txt;
+}
+
+.navBar {
+    -fx-background-color: -fx-bg;
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-radius: 10 10 0 0;
+}
+
+.navBar:hover {
+    -fx-background-color: -fx-bg2;
+}
+
+.navBtn {
+    -fx-background-color: -fx-bg;
+    -fx-text-fill: -fx-txt;
+    -fx-background-radius: 0 10 0 0;
+    -fx-border-radius: 0 10 0 0;
+}
+
+.navBtn:hover {
+    -fx-background-color: -fx-ac;
+}
+
+.field {
+    -fx-background-color: -fx-bg2;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: -fx-txt2;
+}
+
+.field:hover {
+    -fx-border-color: -fx-ac;
+}
+
+.btn {
+    -fx-background-color: -fx-btn;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: -fx-txt;
+}
+
+.btn:hover {
+    -fx-background-color: -fx-ac;
+}
+
+.moreBtn {
+    -fx-background-color: -fx-btn;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.moreBtn:hover {
+    -fx-background-color: -fx-ac;
+}
+
+.addNewBtn {
+    -fx-background-color: -fx-ac;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.addNewBtn:hover {
+    -fx-background-color: -fx-ac-hover;
+}
+
+.searchBar {
+    -fx-background-color: -fx-btn;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: -fx-txt;
+}
+
+.searchBar:hover{
+    -fx-border-color: -fx-ac;
+}
+
+.bgBlur {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.text-area {
+    -fx-background-color: -fx-bg2; 
+    -fx-text-fill: -fx-txt;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 0px; /* Removes the border */
+    -fx-background-insets: 0; /* Prevents any padding artifacts */
+}
+
+.text-area .content {
+    -fx-background-color: transparent; /* Removes inner border effect */
+    -fx-padding: 10px; /* Adjusts spacing */
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent; /* Hides the background of the scroll pane */
+}
+
+.text-area .viewport {
+    -fx-background-color: transparent; /* Removes viewport background */
+}
+
+.text-area .prompt-text {
+    -fx-text-fill: #E0E0E0 !important;
+    -fx-font-size: 14px;
+}
+
+/* Make ScrollPane Background Transparent */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Hide the ScrollPane Viewport Background */
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Make the ScrollBar itself Transparent */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-pref-width: 12px;  /* Adjust width */
+    -fx-pref-height: 12px;
+    -fx-background-color: transparent; /* Fully transparent */
+}
+
+/* Make the Track Fully Transparent */
+.scroll-bar .track {
+    -fx-background-color: transparent; 
+}
+
+/* Style the ScrollBar Thumb (Draggable Part) */
+.scroll-bar .thumb {
+    -fx-background-color: -fx-ac; /* Matches button color */
+    -fx-background-radius: 5px;
+    -fx-min-height: 30px; /* Prevent tiny thumb */
+    -fx-opacity: 1; /* Make thumb slightly transparent */
+}
+
+/* Hover Effect for ScrollBar Thumb */
+.scroll-bar .thumb:hover {
+    -fx-background-color: -fx-ac-hover; /* Accent color on hover */
+    -fx-opacity: 1; /* Fully visible when hovered */
+}
+
+/* Completely Hide Increment & Decrement Buttons */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-opacity: 0; /* Make them invisible */
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+/* Remove Arrow Icons */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " "; /* No shape */
+    -fx-padding: 0;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #888; /* Light border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+}
+
+/* Hover Effect */
+.custom-checkbox .box:hover {
+    -fx-border-color: -fx-ac-hover; /* Light purple when hovered */
+}
+
+/* Checked State */
+.custom-checkbox:selected .box {
+    -fx-background-color: -fx-btn; /* Purple accent */
+    -fx-border-color: -fx-ac;
+}
+
+/* Checkmark Styling */
+.custom-checkbox:selected .mark {
+    -fx-background-color: -fx-txt; /* Change checkmark color */
+    -fx-stroke: -fx-txt; /* Change the stroke color */
+    -fx-stroke-width: 2px;
+}
+
+.userBtn {
+    -fx-background-color: -fx-btn;
+    -fx-text-fill: -fx-txt;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.userBtn:hover {
+    -fx-background-color: -fx-ac;
+}
+
+.logoutBtn:hover {
+    -fx-background-color: rgb(255, 71, 71);
+}
+
+.notification {
+    -fx-background-color: -fx-btn;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-ac;
+    -fx-text-fill: -fx-txt;
+}
